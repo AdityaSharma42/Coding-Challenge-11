@@ -9,5 +9,6 @@ function updateTotalPrice(){
     const quantity= parseInt (quantityInput.value);
     const totalPrice= productPrice*quantity;
     totalPriceElement.textContent= `$${totalPrice.toFixed(2)}`;
-
+productSelector.addEventListener('change', updateTotalPrice);
+quantity.addEventListener('input', updateTotalPrice);
 }
